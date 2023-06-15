@@ -1,9 +1,11 @@
 import express, { Request, Response } from 'express';
 import path from 'path';
 import dotenv from 'dotenv';
-import apiRoutes from './routes/api';
-import mainRoutes from "./routes";
 import userRoutes from "./routes/users";
+import carRoutes from "./routes/cars";
+import loginRoutes from "./routes/login";
+import employersRoutes from "./routes/employers";
+import clientsRoutes from "./routes/clients";
 import cors from 'cors';
 
 import {mongoConnect} from "./database/mongo";
@@ -30,6 +32,10 @@ server.use(cors({
     }
 ));
 server.use(userRoutes);
+server.use(carRoutes);
+server.use(loginRoutes);
+server.use(employersRoutes);
+server.use(clientsRoutes);
 server.use((req: Request, res: Response) => {
     res.status(404);
     res.json({error: 'Endpoint não encontrado.'});
