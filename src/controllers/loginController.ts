@@ -1,7 +1,9 @@
 import { Request, Response } from 'express';
-
+import User from '../models/User';
 export const login = async (req:Request,res:Response) => {
-    let user = email.User.findOne();
+    let user = User.findOne({
+        email: req.body.email,
+    })
     if (user) {
         return user;
     } else {

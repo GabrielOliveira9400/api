@@ -1,13 +1,7 @@
-import { Request, Response } from 'express';
-import {login} from "../controllers/loginController";
+import * as loginController from "../controllers/loginController";
+import { Router } from 'express';
+const router = Router();
 
-app.post('/login', async (req: Request, res: Response) => {
-    const { email, password } = req.body;
+router.post('/login', loginController.login);
 
-    try {
-        const user = await login(email, password);
-        res.json(user);
-    } catch (error) {
-        res.status(401).json({ error: error.message });
-    }
-});
+export default router;
