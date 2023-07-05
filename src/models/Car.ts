@@ -15,7 +15,7 @@ interface carsType {
     motorizacao: string;
     marca: string;
     grupo: string;
-    placa: string;
+    price: string;
     caracteristicas: carsInfo;
 }
 
@@ -42,7 +42,7 @@ const schema = new Schema<carsType>({
         type: String,
         required: true
     },
-    placa: {
+    price: {
         type: String,
         required: true
     },

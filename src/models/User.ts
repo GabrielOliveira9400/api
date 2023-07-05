@@ -4,6 +4,7 @@ type userType = {
     email: string,
     name: string,
     password: string,
+    rules?: string,
 }
 const schema = new Schema<userType>({
     name: {
@@ -18,6 +19,10 @@ const schema = new Schema<userType>({
         type: String,
         required: true
     },
+    rules: {
+        type: String,
+        required: false
+    }
 });
 
 const modelName: string = 'User';
