@@ -8,7 +8,7 @@ export const addReserve = async (req:Request,res:Response) => {
     newReserve.dateInitial = req.body.dateInitial;
     newReserve.dateFinal = req.body.dateFinal;
     newReserve.carModel = req.body.carModel;
-    newReserve.carPlate = req.body.carPlate;
+    newReserve.email = req.body.email;
     try{
         await newReserve.save();
         console.log('Reserva adicionada corretamente!');

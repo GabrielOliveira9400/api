@@ -3,7 +3,16 @@ import Car from '../models/Car';
 
 export const addCar = async (req:Request,res:Response) => {
     let newCar = new Car();
+
+    let caracteristicas = {
+        tracao: req.body.tracao,
+        combustivel: req.body.combustivel,
+        ano: req.body.ano,
+        transmissao: req.body.transmissao,
+        cor: req.body.cor
+    }
     newCar = Object.assign(newCar, req.body);
+    newCar.caracteristicas = caracteristicas;
     try{
         await newCar.save();
         console.log('Carro adicionado corretamente!');

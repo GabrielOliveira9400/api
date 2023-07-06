@@ -2,11 +2,11 @@ import {Schema, model, connection} from 'mongoose';
 
 
 interface carsInfo {
-    cor: string;
-    ano: number;
-    transmissao: string;
-    combustivel: string;
-    tracao: string;
+    cor?: string;
+    ano?: number;
+    transmissao?: string;
+    combustivel?: string;
+    tracao?: string;
 }
 interface carsType {
     modelo: string;
@@ -15,8 +15,8 @@ interface carsType {
     motorizacao: string;
     marca: string;
     grupo: string;
-    price: string;
-    caracteristicas: carsInfo;
+    price?: string;
+    caracteristicas?: carsInfo;
 }
 
 const schema = new Schema<carsType>({

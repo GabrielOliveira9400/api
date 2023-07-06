@@ -6,7 +6,7 @@ type reserveType = {
     dateInitial: Date,
     dateFinal: Date,
     carModel: string,
-    carPlate: string,
+    email: string,
 }
 const schema = new Schema<reserveType>({
     value: {
@@ -24,8 +24,9 @@ const schema = new Schema<reserveType>({
     carModel: {
         type: String,
     },
-    carPlate: {
+    email: {
         type: String,
+        required: true
     }
 });
 
