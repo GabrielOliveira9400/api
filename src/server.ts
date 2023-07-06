@@ -6,6 +6,7 @@ import carRoutes from "./routes/cars";
 import loginRoutes from "./routes/login";
 import employersRoutes from "./routes/employers";
 import clientsRoutes from "./routes/clients";
+import reservesRoutes from "./routes/reserves";
 import cors from 'cors';
 
 import {mongoConnect} from "./database/mongo";
@@ -36,6 +37,7 @@ server.use(carRoutes);
 server.use(loginRoutes);
 server.use(employersRoutes);
 server.use(clientsRoutes);
+server.use(reservesRoutes);
 server.use((req: Request, res: Response) => {
     res.status(404);
     res.json({error: 'Endpoint não encontrado.'});
