@@ -22,11 +22,9 @@ interface carsType {
 const schema = new Schema<carsType>({
     modelo: {
         type: String,
-        required: true
     },
     categoria: {
         type: String,
-        required: true
     },
     nome: {
         type: String,
@@ -36,36 +34,28 @@ const schema = new Schema<carsType>({
     },
     marca: {
         type: String,
-        required: true
     },
     grupo: {
         type: String,
-        required: true
     },
     price: {
         type: String,
-        required: true
     },
     caracteristicas: {
         cor: {
             type: Number,
-            required: true
         },
         ano: {
             type: Number,
-            required: true
         },
         transmissao: {
             type: String,
-            required: true
         },
         combustivel: {
             type: String,
-            required: true
         },
         tracao: {
             type: String,
-            required: true
         }
     }
 });
