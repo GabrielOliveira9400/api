@@ -16,6 +16,7 @@ interface carsType {
     marca: string;
     grupo: string;
     price?: string;
+    foto?: string;
     caracteristicas?: carsInfo;
 }
 
@@ -39,6 +40,9 @@ const schema = new Schema<carsType>({
         type: String,
     },
     price: {
+        type: String,
+    },
+    foto: {
         type: String,
     },
     caracteristicas: {
