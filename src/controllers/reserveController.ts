@@ -22,7 +22,7 @@ export const addReserve = async (req:Request,res:Response) => {
 
 export const reserveByEmail = async (req:Request,res:Response) => {
     let users = await Reserve.find({
-        email: req.body.email,
+        email: req.params.email,
     });
     res.json(users);
 }
