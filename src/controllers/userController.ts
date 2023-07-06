@@ -6,6 +6,7 @@ export const addUser = async (req:Request,res:Response) => {
     newUser.name = req.body.name;
     newUser.email = req.body.email;
     newUser.password = req.body.password;
+    newUser.rules = req.body.rules;
     try{
         await newUser.save();
         console.log('Usuário adicionado corretamente!');
